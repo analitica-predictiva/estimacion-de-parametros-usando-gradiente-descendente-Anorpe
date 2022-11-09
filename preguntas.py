@@ -44,16 +44,16 @@ def pregunta_02():
 
     # Defina el parámetro inicial `params` como un arreglo de tamaño 3 con ceros
     params = np.zeros(x_poly.shape[1])
-    for _ in range(n_iterations):
+    for i in range(n_iterations):
 
         # Compute el pronóstico con los parámetros actuales
-        y_pred = np.___(___, ___)
+        y_pred = np.mul(params, y)
 
         # Calcule el error
-        error = ___ - ___
+        error = y_pred - y
 
         # Calcule el gradiente
-        gradient = ____
+        gradient = np.gradient(params)
 
         # Actualice los parámetros
         params = params - learning_rate * gradient

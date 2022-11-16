@@ -50,7 +50,7 @@ def pregunta_02():
         y_pred = np.dot(x_poly, params)
 
         # Calcule el error
-        error = y - y_pred
+        error = y_pred - y
 
         # Calcule el gradiente
         #gradient = np.gradient(params,x_poly.shape[1])
